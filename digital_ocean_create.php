@@ -11,8 +11,8 @@ $adapter = new BuzzAdapter($token);
 $digitalocean = new DigitalOceanV2($adapter);
 $droplet = $digitalocean->droplet();
 
-$names = ['murap'];
-// $names = ['yamaguchi', 'kazuma', 'minami', 'kojima', 'murayama', 'ken', 'mukoyama', 'hasegawa'];
+// $names = ['murap'];
+$names = ['yamaguchi', 'kazuma', 'minami', 'kojima', 'murayama', 'ken', 'mukoyama', 'hasegawa'];
 
 foreach ($names as $name) {
 	$created = $droplet->create($name, 'sgp1', '512mb', 'ubuntu-14-04-x64');

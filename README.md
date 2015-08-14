@@ -49,8 +49,6 @@ WindowsというOSには「Windwos7」「Windows8」最近では「Windows10」�
 普段、ヨドバシなどの量販店ではなかなか見ることがありませんがWindowsには「Windows Server 2012」など、サーバ用途に特化したOSもあります。
 
 
-> ソフトウェアの種類
-
 # 2 サーバプログラムの特徴
 
 サーバと呼ばれるプログラムの特徴は以下のとおりです。
@@ -145,7 +143,7 @@ https://www.digitalocean.com/
 
 > Linuxにはviエディタというソフトが標準でインストールされています。viエディタはviコマンドで起動できます。（参考） http://net-newbie.com/linux/commands/vi.html
 
-## Linuxサーバへの接続
+## 4.4 Linuxサーバへの接続
 
 Linuxサーバに接続するには次の情報が必要です。
 
@@ -170,7 +168,7 @@ http://ice.hotmint.com/putty/
 
 > あとは雰囲気で
 
-## HTTPサーバのインストール
+## 4.5 HTTPサーバのインストール
 
 Ubuntuはapt-getコマンドでパッケージを追加できます。
 
@@ -183,7 +181,7 @@ apt-get install apache2
 10秒ほどでApacheのインストールは完了します。
 
 
-## HTTPサーバの起動・停止
+## 4.6 HTTPサーバの起動・停止
 
 Apacheを起動するには次のコマンドを入力します。
 
@@ -201,7 +199,7 @@ apachectl stop
 
 > Apacheが停止しているときにブラウザからアクセスすると？？
 
-## Webページの作成
+## 4.7 Webページの作成
 
 Apacheはデフォルトで/var/www/htmlフォルダを公開するようになっています。
 
@@ -214,3 +212,9 @@ echo Hello World > /var/www/html/index.html
 ```
 
 > echoコマンドの後に &gt; を付けることでメッセージをファイルに出力できます。&gt;のことをリダイレクトと呼びます。
+
+SCPコマンドによるファイル転送
+
+```
+scp ~/Desktop/murayama.html root@128.199.200.88:/var/www/html
+```
